@@ -1,4 +1,3 @@
-/* ───────── Theme: change colors here ───────── */
 :root {
   --bg: #0a0d22;
   --panel: #11163a;
@@ -13,7 +12,6 @@
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Undo the Vite starter's centered layout */
 html,
 body {
   margin: 0;

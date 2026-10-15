@@ -1,16 +1,9 @@
 import { useState } from 'react'
-import logo from './assets/logo-light.svg'
+import logo from './assets/logo.svg'
 import './App.css'
 
-// ─────────────────────────────────────────────────────────
-// EDIT HERE. Change any text below and save: the page
-// updates instantly (HMR) without a refresh.
-//
-// Tip: wrap a word in `backticks` inside any text to show it
-// as inline code, like `npm run build`.
-// ─────────────────────────────────────────────────────────
 const SITE = {
-  label: 'Update 3',
+  label: 'Demo update',
   repo: 'https://github.com/ALEX0661/devforge-starter',
   headline: ['Take your project', 'from laptop to live.'], // second line is highlighted
   intro:
@@ -33,8 +26,6 @@ const GLOSSARY = [
   { term: 'Environment variable', text: 'A secret setting, like a password, kept outside your code.' },
 ]
 
-// Each section has steps. A step can have `code` (shows a copy button)
-// and `note` (shows a highlighted tip). To add a step, copy a block.
 const GUIDE = [
   {
     id: 'setup',
