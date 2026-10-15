@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img" aria-label="DevForge">
+  <defs>
+    <g id="devw">
+      <path transform="translate(0 0)" fill-rule="evenodd" d="M0 0H30L46 16V44L30 60H0Z M14 12V48H26L32 42V18L26 12Z"/>
+      <path transform="translate(56 0)" fill-rule="evenodd" d="M0 0H40V12H14V24H34V36H14V48H40V60H0Z"/>
+      <path transform="translate(106 0)" fill-rule="evenodd" d="M0 0H15L24 36L33 0H48L32 60H16Z"/>
+    </g>
+    <g id="forgew">
+      <path transform="translate(0 0)" fill-rule="evenodd" d="M0 0H40V12H14V24H34V36H14V60H0Z"/>
+      <path transform="translate(48 0)" fill-rule="evenodd" d="M10 0H36L46 10V50L36 60H10L0 50V10Z M14 12V48H32V12Z"/>
+      <path transform="translate(102 0)" fill-rule="evenodd" d="M0 0H36L46 10V30L38 38L46 60H31L23 40H14V60H0Z M14 12V26H32V12Z"/>
+      <path transform="translate(156 0)" fill-rule="evenodd" d="M10 0H46V12H14V48H32V38H24V26H46V60H10L0 50V10Z"/>
+      <path transform="translate(210 0)" fill-rule="evenodd" d="M0 0H40V12H14V24H34V36H14V48H40V60H0Z"/>
+    </g>
+    <clipPath id="dA"><rect x="0" y="60" width="300" height="4"/></clipPath>
+    <clipPath id="dB"><rect x="0" y="31" width="300" height="3"/></clipPath>
+    <clipPath id="fA"><rect x="0" y="94" width="300" height="6"/></clipPath>
+    <clipPath id="fB"><rect x="0" y="118" width="300" height="3"/></clipPath>
+  </defs>
+
+  <path d="M14 98C2 50 62 9 150 7C232 5 291 38 287 98" fill="none" stroke="#1b2250" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(90 22) scale(.8)" fill="#1b2250"><use href="#devw"/></g>
+  <g clip-path="url(#dA)"><g transform="translate(95 22) scale(.8)" fill="#1b2250"><use href="#devw"/></g></g>
+  <g clip-path="url(#dB)"><g transform="translate(84 22) scale(.8)" fill="#8ad62f"><use href="#devw"/></g></g>
+
+  <g transform="translate(25 76)" fill="#8ad62f"><use href="#forgew"/></g>
+  <g clip-path="url(#fA)"><g transform="translate(30 76)" fill="#8ad62f"><use href="#forgew"/></g></g>
+  <g clip-path="url(#fB)"><g transform="translate(19 76)" fill="#1b2250"><use href="#forgew"/></g></g>
+</svg>

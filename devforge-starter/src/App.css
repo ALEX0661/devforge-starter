@@ -1,0 +1,576 @@
+/* ───────── Theme: change colors here ───────── */
+:root {
+  --bg: #0a0d22;
+  --panel: #11163a;
+  --code-bg: #060818;
+  --line: #2a3170;
+  --text: #e9ecff;
+  --muted: #98a1d6;
+  --lime: #8ad62f;
+  --purple: #6b4eff;
+
+  --mono: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Undo the Vite starter's centered layout */
+html,
+body {
+  margin: 0;
+  display: block;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border: none;
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--lime);
+}
+
+/* ───────── Top bar ───────── */
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--line);
+}
+
+.bar-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.bar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.bar nav a {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.bar nav a:hover {
+  color: var(--lime);
+  border-color: var(--lime);
+}
+
+/* ───────── Hero ───────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 72px 0;
+}
+
+.label {
+  margin: 0 0 16px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hl {
+  display: block;
+  color: var(--lime);
+}
+
+.intro {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--bg);
+  background: var(--lime);
+  border: 2px solid var(--lime);
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: transparent;
+  color: var(--lime);
+}
+
+.cta-alt {
+  background: transparent;
+  color: var(--lime);
+}
+
+.cta-alt:hover {
+  background: var(--lime);
+  color: var(--bg);
+}
+
+.cta:focus-visible,
+.toc a:focus-visible,
+.code button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ───────── Test panel ───────── */
+.panel {
+  padding: 24px;
+  background: var(--panel);
+  border: 2px solid var(--line);
+  box-shadow: 8px 8px 0 var(--purple);
+}
+
+.panel-title {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.panel-count {
+  margin: 8px 0 16px;
+  font-family: var(--mono);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+}
+
+.panel button {
+  width: 100%;
+  padding: 12px 16px;
+  font: 700 15px var(--sans);
+  color: var(--bg);
+  background: var(--lime);
+  border: 2px solid var(--lime);
+  cursor: pointer;
+}
+
+.panel button:hover {
+  background: transparent;
+  color: var(--lime);
+}
+
+.panel button:active {
+  transform: translate(2px, 2px);
+}
+
+.panel button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+.panel-hint {
+  margin: 16px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  color: var(--lime);
+}
+
+/* ───────── Guide layout ───────── */
+.guide {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 56px;
+  padding-bottom: 40px;
+  border-top: 2px solid var(--line);
+}
+
+.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  padding-top: 32px;
+}
+
+.toc-title {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid var(--line);
+}
+
+.toc a {
+  display: block;
+  padding: 6px 14px;
+  margin-left: -2px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.toc a:hover {
+  color: var(--lime);
+  border-left-color: var(--lime);
+}
+
+.guide-body {
+  min-width: 0;
+  padding-top: 32px;
+}
+
+.g-sec {
+  padding-bottom: 56px;
+  scroll-margin-top: 16px;
+}
+
+.g-sec h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 8px;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--purple);
+}
+
+.sec-intro {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+/* ───────── Words to know ───────── */
+.words {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.words > div {
+  padding: 16px 20px 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.words dt {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lime);
+}
+
+.words dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+/* ───────── Steps ───────── */
+.steps {
+  display: grid;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+}
+
+.step-n {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--lime);
+  border: 2px solid var(--lime);
+}
+
+.steps h3 {
+  margin: 4px 0 4px;
+  font-size: 18px;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.note {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--panel);
+  border-left: 3px solid var(--purple);
+}
+
+.steps .note {
+  margin-top: 12px;
+}
+
+.steps .step-link {
+  margin-top: 8px;
+}
+
+.step-link a {
+  font-weight: 600;
+}
+
+/* ───────── Code block ───────── */
+.code {
+  position: relative;
+  margin: 12px 0 0;
+  background: var(--code-bg);
+  border: 2px solid var(--line);
+}
+
+.code pre {
+  margin: 0;
+  padding: 14px 84px 14px 16px;
+  overflow-x: auto;
+}
+
+.code code {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.code button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font: 700 12px var(--mono);
+  color: var(--lime);
+  background: var(--code-bg);
+  border: 1px solid var(--lime);
+  cursor: pointer;
+}
+
+.code button:hover {
+  background: var(--lime);
+  color: var(--bg);
+}
+
+/* ───────── Checklist, mistakes, pick, resources ───────── */
+.checks,
+.mistakes,
+.pick,
+.resources {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.checks li,
+.mistakes li,
+.pick li,
+.resources li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.checks label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.checks input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--lime);
+}
+
+.checks label.done {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.mistakes h3 {
+  margin: 0 0 2px;
+  font-size: 17px;
+}
+
+.mistakes p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.pick li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+}
+
+.pick strong {
+  font-family: var(--mono);
+  color: var(--lime);
+}
+
+.pick span {
+  color: var(--muted);
+}
+
+.resources a {
+  font-weight: 600;
+}
+
+/* ───────── Footer ───────── */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 2px solid var(--line);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ───────── Small screens ───────── */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 0;
+  }
+
+  .panel {
+    box-shadow: 6px 6px 0 var(--purple);
+  }
+
+  .guide {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* The contents list becomes a scrolling strip */
+  .toc {
+    position: static;
+    padding: 20px 0 0;
+  }
+
+  .toc ul {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    border-left: none;
+    padding-bottom: 8px;
+  }
+
+  .toc a {
+    margin: 0;
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid var(--line);
+  }
+
+  .toc a:hover {
+    border-bottom-color: var(--lime);
+  }
+}
+
+@media (max-width: 520px) {
+  .bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .g-sec h2 {
+    font-size: 25px;
+  }
+
+  .steps li {
+    grid-template-columns: 30px 1fr;
+    gap: 12px;
+  }
+
+  .step-n {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pick li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
