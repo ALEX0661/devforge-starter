@@ -3,7 +3,7 @@ import logo from './assets/logo.svg'
 import './App.css'
 
 const SITE = {
-  label: 'Demo',
+  label: 'Demo update',
   repo: 'https://github.com/ALEX0661/devforge-starter',
   headline: ['Take your project', 'from laptop to live.'], // second line is highlighted
   intro:
