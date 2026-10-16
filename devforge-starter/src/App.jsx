@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/logo.svg'
-import './App.cs'
+import './App.css'
 
 const SITE = {
   label: 'Demo',
